@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block head %}
+	<title>Contact Form</title>
+{% endblock %}
+{% block style %}
+{% endblock %}
+{% block content %}
+	<div class="container">
+				<div class="row justify-content-center align-items-center">
+			<div class="col-sm-6 ">
+				<form id = "contactForm" method = "POST">{% csrf_token %}
+					{{ contactForm.as_p }}
+					<input type="submit" name="contact-submit" class="btn btn-primary" />
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

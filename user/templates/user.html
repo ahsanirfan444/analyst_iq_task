@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block head %}
+	<title>Get user Info</title>
+{% endblock %}
+{% block style %}
+{% endblock %}
+{% block content %}
+	<div class="container">
+		
+		<div class="row justify-content-center align-items-center">
+			<div class="col-4">
+				<label>Select Username</label>
+				<select class="form-control" id = "users">
+					<option selected="true" disabled="disabled">Select user</option>
+					{% for uname in usernames %}
+						<option value = {{uname.username}}>{{uname.username}}</option>
+					{% endfor %}
+				</select>
+			</div>
+			<div class="col-9" id = "user_info">
+				<hr />
+				<table class="table table-stripped table-fixed">
+					<thead>
+						<tr>
+							<td>First Name</td>
+							<td>Last Name</td>
+							<td>Email</td>
+							<td>is_active</td>
+							<td>Date Joined</td>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+{% block script %}
+	
+{% endblock %}
